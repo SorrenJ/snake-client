@@ -1,20 +1,37 @@
 const net = require("net");
 
-const conn = net.createConnection({
-  host: 'localhost', // change to IP address of computer, more on that below
-  port: 3000,
-});
+// establishes a connection with the game server
+const connect = function () {
 
-conn.setEncoding("utf8"); // interpret data as text
-
-
-// client.js
-conn.on("data", (data) => {
-    console.log("Server says: ", data);
+  console.log("Connecting...");
+  
+  const conn = net.createConnection({
+    host: 'localhost',
+    port: 50541,
   });
 
-  // client.js
 
-conn.on("connect", () => {
-    conn.write("Hello from client!");
+
+  conn.on("connect", () => {
+    // code that does something when the connection is first established
+    console.log("Connection is successfully established!");
+    conn.write("Name: Sorren");
+
   });
+
+  // Update the connect function to handle incoming data and console.log it for the player.
+  conn.on("data", (data) => {
+    console.log("incoming data: ", data);
+  });
+
+
+
+
+
+
+  // interpret incoming data as text
+  conn.setEncoding("utf8");
+
+  return conn;
+};
+  module.exports = connect; 
