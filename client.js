@@ -15,7 +15,7 @@ const connect = function () {
   conn.on("connect", () => {
     // code that does something when the connection is first established
     console.log("Connection is successfully established!");
-    conn.write("Name: Sorren");
+    conn.write("Name: Sor");
 
   });
 
