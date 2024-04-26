@@ -35,7 +35,11 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
-      
+  
+  // Canned Message
+  if (key === 't') {
+    connection.write("Say: Hello there!");
+  }  
 
   /*
   "Move: up" - move up one square (unless facing down)
