@@ -8,8 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+![Server Output](https://github.com/SorrenJ/snake-client/blob/main/snek_server_output.png)
 
 
 ## Getting Started
