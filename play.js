@@ -20,7 +20,9 @@ const setupInput = function (conn) {
   // specifies what happens when "data:" is received from stdin...  - key inputs
   const handleUserInput = function () {
     // your code here
-    process.exit(); 
+    if (key === '\u0003') {
+        process.exit();
+      }
   };
 
 
